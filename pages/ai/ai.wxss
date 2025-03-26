@@ -1,0 +1,279 @@
+/* pages/ai/ai.wxss */
+.container{
+  height: 100vh;
+  position: relative;
+}
+.bg{
+  position: absolute;
+  width: 300rpx;
+  height: 300rpx;
+  margin-top: 100rpx;
+}
+.big{
+  position: absolute;
+  font-size: 40rpx;
+  font-weight: bold;
+  margin-top: 400rpx;
+}
+.small{
+  position: absolute;
+  margin-top: 480rpx;
+}
+.small_box {
+  position: fixed;
+  left: 20rpx;
+  top: 10rpx;
+  transition: all 0.3s ease;
+  z-index: 1001;
+  
+  background-color: #dadada;
+  border-radius: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.3);
+  text-align: center;
+  
+}
+.small_box.collapsed {
+  width: 60rpx;
+  height: 60rpx;
+  
+}
+.collapsed-icon {
+  width: 40rpx;
+  height: 40rpx;
+}
+.dh{
+  height: 80rpx !important;
+  width: 60rpx !important;
+  z-index: 3;
+}
+
+.ls {
+  width:60rpx !important;
+  height: 60rpx;
+  z-index: 3;
+}
+.small_word1{
+  color: black;
+  font-size: 25rpx;
+  z-index: 3;
+}
+.small_word2{
+  color: black;
+  font-size: 25rpx;
+
+}
+/* pages/ai/ai.wxss */
+/* 新增样式 */
+.input-container {
+  position: fixed;
+  bottom: 40rpx;
+  left: 30rpx;
+  right: 30rpx;
+  display: flex;
+  align-items: center;
+  background: rgb(221, 221, 221);
+  border-radius: 20rpx;
+  padding: 20rpx;
+  box-shadow: 0 4rpx 12rpx rgba(0,0,0,0.1);
+}
+
+.input-box {
+  flex: 1;
+  font-size: 28rpx;
+  padding: 0 20rpx;
+}
+
+.send-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 20rpx;
+}
+
+/* 侧边栏样式 */
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 500rpx;
+  background: #f5f5f5;
+  z-index: 999;
+  transition: all 0.3s ease;
+  box-shadow: 15rpx 20rpx 12rpx rgba(0,0,0,0.2);
+}
+
+.history-list {
+  padding: 30rpx;
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.history-item {
+  padding: 20rpx;
+  margin-bottom: 20rpx;
+  background: #f5f5f5;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  color: #666;
+}
+.question {
+  font-weight: bold;
+  color: #333;
+}
+.answer-preview {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.clear-btn {
+  position: absolute;
+  left: 100rpx;
+  bottom: 40rpx;
+  background: #447fff;
+  color: white;
+  border-radius: 40rpx;
+}
+/* 新增动画样式 */
+.send-icon.animate {
+  animation: scaleUp 0.6s ease;
+}
+
+@keyframes scaleUp {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+.nav-icons {
+  transition: all 0.3s ease;
+}
+/* pages/ai/ai.wxss */
+/* 新增遮罩层样式 */
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 999; /* 确保在侧边栏之下 */
+}
+
+/* 侧边栏层级调整 */
+.sidebar {
+  z-index: 1000; /* 高于遮罩层 */
+}
+
+/* 阻止页面滚动 */
+.container {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.model-tabs {
+  margin-top: 970rpx;
+  margin-left: 60rpx;
+  white-space: nowrap;
+  padding: 10rpx 20rpx;
+}
+.tab-item {
+  display: inline-block;
+  padding: 8rpx 20rpx;
+  margin-right: 20rpx;
+  border-radius: 30rpx;
+  background: #f0f0f0;
+}
+.tab-item.active {
+  background: #447fff;
+  color: white;
+}
+/* 消息容器 */
+.message-container {
+  position: absolute;
+  top: 32rpx; /* 根据实际背景图高度调整 */
+  bottom: 216rpx; /* 留出底部输入区域空间 */
+  left: -80rpx;
+  right: 0;
+  padding: 20rpx 30rpx;
+  z-index: 1; /* 确保在背景图之上 */
+}
+
+/* 消息气泡通用样式 */
+.message-bubble {
+  margin: 30rpx 0;
+  display: flex;
+  align-items: center;
+  max-width: 80%;
+  animation: fadeInUp 0.3s ease;
+}
+
+/* 用户消息样式 */
+.user {
+  margin-left: auto;
+  flex-direction: row-reverse;
+}
+.user text {
+  background: #447fff;
+  color: white;
+  border-radius: 30rpx 30rpx 4rpx 30rpx;
+}
+
+/* AI消息样式 */
+.ai text {
+  background: #f0f0f0;
+  color: #333;
+  border-radius: 30rpx 30rpx 30rpx 4rpx;
+}
+
+/* 消息内容样式 */
+.message-bubble text {
+  padding: 20rpx 30rpx;
+  font-size: 28rpx;
+  line-height: 1.5;
+  margin: 0 20rpx;
+  max-width: 80%;
+  word-break: break-word;
+}
+
+/* 头像样式 */
+.avatar {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20rpx);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.zhankai{
+  position: relative;
+  padding: 20rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.function-item {
+  margin: 30rpx 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.collapse-btn {
+  width: 30rpx;
+  height: 30rpx;
+  padding: 10rpx;
+}
+
+.collapse-icon {
+  width: 30rpx !important;
+  height: 30rpx !important;
+  opacity: 0.6;
+}

@@ -1,0 +1,122 @@
+<view class="container">
+  <!-- 顶部标签栏 -->
+  <view class="tab-bar">
+    <view class="tab-item" bindtap="navigateToLike">
+      <image src="/图片素材/1-3消息/点赞.png" class="icon"></image>
+      <text class="icon-text">点赞</text>
+    </view>
+    <view class="tab-item" bindtap="navigateToComment">
+      <image src="/图片素材/1-3消息/评论.png" class="icon"></image>
+      <text class="icon-text">评论</text>
+    </view>
+    <view class="tab-item" bindtap="navigateToFollow">
+      <image src="/图片素材/1-3消息/关注.png" class="icon"></image>
+      <text class="icon-text">关注</text>
+    </view>
+    <view class="tab-item" bindtap="navigateToNotification">
+      <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/底图.png" class="icon"></image>
+      <text class="icon-text">系统通知</text>
+    </view>
+  </view>
+
+  <!-- 聊天记录区域 -->
+  <view class="message-list">
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像1.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">豆酱</text>
+              <text class="time">01-15</text>
+            </view>
+            <text class="message-content">请问出《操作系统》的二手书嘛？</text>
+          </view>
+        </view>
+    </view>
+    
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像3.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">pursue</text>
+              <text class="time">01-15</text>
+            </view>
+            <text class="message-content">请问出《python数据应用与分析》的二手书嘛？</text>
+          </view>
+        </view>
+    </view>
+
+  
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像1.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">邹围是有燕子的晴天</text>
+              <text class="time">2025-01-14</text>
+            </view>
+            <text class="message-content">你今天发的那只猫猫好可爱呀！</text>
+          </view>
+        </view>
+    </view>
+    
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像2.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">邹围是有燕子的晴天</text>
+              <text class="time">2025-01-14</text>
+            </view>
+            <text class="message-content">你今天发的那只猫猫好可爱呀！</text>
+          </view>
+        </view>
+    </view>
+    
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像3.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">邹围是有燕子的晴天</text>
+              <text class="time">2025-01-14</text>
+            </view>
+            <text class="message-content">你今天发的那只猫猫好可爱呀！</text>
+          </view>
+        </view>
+    </view>
+    
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像4.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">邹围是有燕子的晴天</text>
+              <text class="time">2025-01-14</text>
+            </view>
+            <text class="message-content">你今天发的那只猫猫好可爱呀！</text>
+          </view>
+        </view>
+    </view>
+    
+    
+    <view class="message-item">
+      <view class="user-info">
+          <image class="avatar2" src="/图片素材/post-icon/touxiang/头像5.png"></image>
+          <view class="nr">
+            <view class="header">
+              <text class="nickname">pursue</text>
+              <text class="time">01-15</text>
+            </view>
+            <text class="message-content">请问出《python数据应用与分析》的二手书嘛？</text>
+          </view>
+        </view>
+    </view>
+
+</view>
+
+<!-- 背景图片 -->
+  <image class="bgpicture" src="/图片素材/1-3消息/消息到底.png"></image>
+
+</view>

@@ -1,0 +1,148 @@
+/* 页面容器 */
+.container {
+  display: flex;
+  height:100%;
+  flex-direction: column;
+  background-color:rgb(255, 255, 255);
+  position:relative;/*设置容器为相对定位*/
+  min-height:100vh;/*容器至少占满整个视口高度*/
+  padding-top: 20px;
+  z-index: 10;
+  background-color: rgb(255, 255, 255);
+}
+
+/* 背景图片 */
+.bgpicture{
+  position: fixed;
+  bottom:0px;
+  right:5px;
+  width: 150px;
+  height: 150px;
+  /* z-index: -1; */
+}
+
+/* 顶部标签栏 */
+.tab-bar {
+  display: flex;
+  position:fixed;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border:2px solid #FFE1AF;
+  border-radius: 15px;
+  width:330px;
+  height:100px;
+  flex-direction:row;/*水平排列*/
+  align-items: center;/*水平居中*/
+  /* overflow: hidden; */
+  z-index: 3;
+}
+
+.tab-item {
+  text-align: center;
+  flex: 1;
+  width:max-content;
+  background-color: rgb(255, 255, 255);
+  margin:10px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 5px;/*图标和文字之间的间距*/
+}
+.icon-text{
+  font-weight: 700;
+}
+
+text {
+  font-size: 15px;
+  white-space: nowrap;
+  color: #333333;
+}
+
+/* 消息列表 */
+.message-list {
+  position:absolute;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  top:125px;
+  /* z-index: -1; */
+  margin-bottom: 20px;
+  /* overflow: hidden; */
+}
+.nr{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.message-item {
+  display:flex;
+  flex-direction: row;
+  padding: 10px;
+  border-bottom: 1px solid #dadada;/*为每个消息项添加底部边框*/
+  /* overflow: auto; */
+  overflow-y: auto;
+}
+/* 用户名的那一行 */
+.user-info {
+  display: flex;
+  align-items: flex-start;
+  flex:1;
+}
+
+.nickname{
+  /* display: flex;
+  flex-direction: column; */
+  font-weight: bold;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.time {
+  font-size: 12px;
+  color: #888888;
+  margin-bottom: 25px;
+  font-weight: 400;
+  align-self: flex-start;
+  margin-top: 5px;
+}
+
+/* 设置头像 */
+.avatar1{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-right:10px;
+}
+.avatar2{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  margin-right:10px;
+}
+.avatar3{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+  /* margin-right:10px;头像与昵称之间的间距 */
+}
+
+.user-info1{
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.message-content {
+  font-size: 14px;
+  color: #979696;
+  font-weight: 400;
+  white-space: pre-wrap;
+}

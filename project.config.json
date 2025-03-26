@@ -1,0 +1,35 @@
+{
+  "compileType": "miniprogram",
+  "libVersion": "trial",
+  "miniprogramRoot": "",
+  "packOptions": {
+    "ignore": [],
+    "include": []
+  },
+  "setting": {
+    "coverView": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "enhance": false,
+    "showShadowRootInWxmlPanel": true,
+    "packNpmRelationList": [],
+    "babelSetting": {
+      "ignore": [],
+      "disablePlugins": [],
+      "outputPath": ""
+    },
+    "useCompilerPlugins": []
+  },
+  "condition": {},
+  "editorSetting": {
+    "tabIndent": "auto",
+    "tabSize": 2
+  },
+  "appid": "wx67ababa14aac727f",
+  "cloudfunctionRoot": "cloudfunctions/",
+  "cloud": {
+    "envId": "zouyanqing-8gcva3coe0f95523",
+    "resourceAppid": "wx67ababa14aac727f"
+  }
+}

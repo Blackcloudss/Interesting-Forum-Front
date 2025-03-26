@@ -1,0 +1,103 @@
+<view class="container">
+  <view class="title-section">
+    <input 
+      class="title-input {{title ? 'bold-text' : ''}}"
+      placeholder="请输入标题（最多10字）" 
+      maxlength="10"
+      value="{{title}}"
+      bindinput="onTitleInput"
+    />
+    <view class="title-count">{{titleCount}}/10</view>
+  </view>
+  <!-- 输入文本框 -->
+  <view class="input-section">
+    <textarea class="text-input" placeholder="畅聊周边的妙趣见闻~" maxlength="1000" bindinput="onInputChange" value="{{inputText}}"></textarea>
+    <view class="word-count">{{wordCount}} / 1000</view>
+  </view>
+ 
+  <!-- 上传图片部分 -->
+  <view class="image-upload">
+    <button class="upload-button" bindtap="chooseImage"> 
+      <text class="upload-button-text">十</text>
+    </button>
+    <view class="image-list">
+      <block wx:for="{{images}}" wx:key="index">
+        <view class="image-item">
+          <!-- 上传的图片 -->
+          <image class="uploaded-image" src="{{item}}" bindtap="previewImage" data-url="{{item}}"></image>
+          <!-- 删除按钮 -->
+          <button class="delete-button" bindtap="deleteImage" data-index="{{index}}">
+            <image src="/图片素材/发布页面/发布1/取消.png" class="delete-icon" />
+          </button>
+        </view>
+      </block>
+    </view> 
+  </view>
+
+  <!-- 发布话题 -->
+  <view class="topic-section">
+    <text class="topic-text">发布话题</text>
+    <view class="topic-button" bindtap="onTopicSelect">
+      {{selectedTopic || '请选择话题'}}
+      <image src="/图片素材/发布页面/发布1/右箭头.png" class="topic-section-icon" />
+    </view>
+  </view>
+  
+  <view class="popup" wx:if="{{showTopicPopup}}">
+    <view class="popup-content topic-popup">
+      <!-- 主分类 -->
+      <block wx:if="{{!currentCategory}}">
+        <view 
+          wx:for="{{categories}}" 
+          wx:key="index"
+          class="topic-option"
+          bindtap="selectMainCategory"
+          data-category="{{item.name}}"
+        >
+          {{item.name}}
+          <image src="/图片素材/发布页面/发布1/右箭头.png" class="category-arrow" />
+        </view>
+      </block>
+      <!-- 子分类 -->
+      <block wx:else>
+        <view class="sub-header" bindtap="backToMainCategory">
+          <image src="/图片素材/发布页面/发布1/返回箭头.png" class="back-arrow" />
+          <text>{{currentCategory}}</text>
+        </view>
+        <view 
+          wx:for="{{currentSubTags}}"
+          wx:key="index"
+          class="sub-option {{selectedSubTag === item ? 'selected' : ''}}"
+          bindtap="selectSubTag"
+          data-tag="{{item}}"
+        >
+          {{item}}
+        </view>
+      </block>
+      
+      <button class="cancel-button" bindtap="closeTopicPopup">取消</button>
+    </view>
+  </view>
+
+  <!-- 观看权限 -->
+  <view class="permission-section" bindtap="showPermissionPopup">
+    <text class="permission-text">观看权限</text>
+    <text class="permission-current">{{viewPermission || '未选择'}}</text>
+    <image src="/图片素材/发布页面/发布1/右箭头.png" class="permission-section-icon" />
+  </view>
+
+  <!-- 弹出的选择框 -->
+  <view class="popup" wx:if="{{showPermissionPopup}}">
+    <view class="popup-content">
+      <view class="option" bindtap="selectOption" data-option="所有人">所有人</view>
+      <view class="option" bindtap="selectOption" data-option="仅学生">仅学生</view>
+      <view class="option" bindtap="selectOption" data-option="仅好友">仅好友</view>
+      <view class="option" bindtap="selectOption" data-option="仅自己">仅自己</view>
+      <button class="cancel-button" bindtap="closePopup">取消</button>
+    </view>
+  </view>
+
+  <view class="publish-section">
+    <button class="publish-button" bindtap="onPublish">发布</button>
+  </view>
+</view>

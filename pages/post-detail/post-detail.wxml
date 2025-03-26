@@ -1,0 +1,91 @@
+<view class="container">
+    <!-- 帖子盒子 -->
+    <view class="post-box" style="height: 520rpx;">
+        <!-- 帖子头部 -->
+        <view class="post-header">
+            <image class="user-avatar" src="/图片素材/post-icon/touxiang/头像1.png"></image>
+            <view class="user-info">
+                <text class="user-nickname">邶邶</text>
+                <text class="post-time">两分钟前</text>
+            </view>
+            <view class="post-actions">
+                <image class="report-icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/举报 1.svg"></image>
+                <text class="report">举报</text>
+                <button bindtap="showFollowModal" class="follow-button" style="width: 100rpx;">关注</button>
+            </view>
+        </view>
+        <!-- 帖子内容 -->
+        <view class="post-content">
+            收计算机组成原理，计算机系统，大学物理的教材~
+        </view>
+        <!-- 帖子图片 -->
+        <image class="post-image" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/个人主页.png"></image>
+        <!-- 帖子标签和操作 -->
+        <view class="post-footer">
+            <image class="category-icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/二手交易组件.svg"></image>
+            <view class="action-icons">
+                <image class="like-icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/赞.svg"></image>
+                <text class="like-count">15</text>
+                <image class="collect-icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/收藏1 1.svg"></image>
+                <text class="collect-count">6</text>
+            </view>
+        </view>
+    </view>
+     <!-- 评论标题 -->
+     <view class="comment-title">
+            <text>评论</text>
+            <text>({{comments.length}})</text>
+        </view>
+    <!-- 评论盒子 -->
+    <scroll-view class="comment-box" scroll-y style="height: 300px;">
+        <!-- 评论列表 -->
+        <scroll-view class="comment-list" scroll-y="{{showAllComments}}" style="{{showAllComments? 'height: auto' : 'height: 800px'}}">
+            <block wx:for="{{comments}}" wx:key="index">
+                <view class="comment-item">
+                    <!-- 评论头部 -->
+                    <view class="comment-header">
+                        <image class="user-avatar" src="/图片素材/post-icon/touxiang/默认头像.webp"></image>
+                        <view class="user-info">
+                            <text bindtap="goToUserPage" class="user-nickname_">{{item.nickname}}</text>
+                            <text class="comment-time_">{{item.time}}</text>
+                        </view>
+                    </view>
+                    <!-- 评论内容 -->
+                    <view class="comment-content">
+                        {{item.content}}
+                    </view>
+                    <!-- 回复盒子 -->
+                    <view class="reply-box">
+                        <block wx:for="{{item.replies}}" wx:key="index">
+                            <view class="reply-item">
+                                <text bindtap="goToUserPage" class="user-nickname">{{item.fromNickname}}</text>
+                                <text>回复</text>
+                                <text bindtap="goToUserPage" class="user-nickname">{{item.toNickname}}</text>
+                                <text>: {{item.content}}</text>
+                            </view>
+                        </block>
+                    </view>
+                    <!-- 评论操作 -->
+                    <view class="action-icons_">
+                        <image class="like-icon_" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/赞.svg"></image>
+                        <text class="like-count_">{{item.likeCount}}</text>
+                        <image class="collect-icon_" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/收藏1 1.svg"></image>
+                        <text class="collect-count_">{{item.collectCount}}</text>
+                    </view>
+                </view>
+            </block>
+        </scroll-view>
+    </scroll-view>
+<!-- 底部输入框 -->
+<view class="input-container">
+        <image class="input-icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/post-xiangqing/笑脸（发评论）.svg"></image>
+        <input class="input-field" placeholder="莞工趣坛，等你”趣“评！" bindinput="onInputChange" value="{{inputValue}}"/>
+        <button class="send-button" bindtap="sendMessage" style="width:120rpx;">发送</button>
+    </view>
+</view>
+
+<!-- 关注成功模态框 -->
+<modal hidden="{{!showFollowModal}}" confirm-text="确定" bindconfirm="hideFollowModal">
+    <view>关注成功！</view>
+</modal>
+    

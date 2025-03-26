@@ -1,0 +1,79 @@
+<view class="container">
+<view class="first-part">
+    <view class="user-info">
+      <image class="avatar" src="/图片素材/post-icon/touxiang/默认头像.webp"></image>
+      <view class="info">
+        <view class="info1">
+          <text class="username">Pursue</text>
+          <image class="sex-icon" src="/图片素材/1-4我的/性别-女 1.png"></image>
+        </view>
+        <text class="college">计算机学院</text>
+      </view>
+      
+        <button class="follow-button" bindtap="navigateToProfile">查看个人主页<image class="follow-button-icon" src="/图片素材/1-4我的/查看2 1.png"></image></button>
+        
+      
+      
+    </view>
+
+    <view class="stats">
+      <view class="stats1">
+        <text>{{followCount}} </text>
+        <view class="stats1-bottom">
+          <text class="stats-text1">关注 </text>
+          <image class="stats1-bottom-icon" src="/图片素材/1-4我的/我的关注 1.png"></image>
+        </view>
+      </view>
+
+      <view class="stats2">
+        <text>{{followerCount}}</text>
+        <view class="stats2-bottom">
+          <text class="stats-text2">粉丝</text>
+          <image class="stats2-bottom-icon" src="/图片素材/1-4我的/粉丝 1.png"></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  
+  <view class="second">
+    <view class="menu">
+      <button bindtap="navigateTo" data-page="set">
+        <view class="menu-left">
+          <image class="second-icon" src="/图片素材/1-4我的/设置 1.png"></image>
+          <text class="second-text">设置相关</text>
+        </view>
+        <view class="menu-right">
+          <image class="second-icon2" src="/图片素材/1-4我的/右.png"></image>
+        </view>
+      </button>
+      <button bindtap="navigateTo" data-page="identity"> 
+        <view class="menu-left">
+          <image class="second-icon" src="/图片素材/1-4我的/身份验证 1.png"></image>
+          <text class="second-text">身份验证</text>
+        </view>
+        <view class="menu-right">
+          <image class="second-icon2" src="/图片素材/1-4我的/右.png"></image>
+        </view>
+      </button>
+      <button bindtap="navigateTo" data-page="about">
+        <view class="menu-left">
+          <image class="second-icon" src="/图片素材/1-4我的/关于我们 1.png"></image>
+          <text class="second-text">关于我们</text>
+        </view>
+        <view class="menu-right">
+          <image class="second-icon2" src="/图片素材/1-4我的/右.png"></image>
+        </view>
+      </button>
+      <button bindtap="navigateTo" data-page="feedback">
+        <view class="menu-left">
+          <image class="second-icon" src="/图片素材/1-4我的/意见反馈 1.png"></image>
+          <text class="second-text">意见反馈</text>
+        </view>
+        <view class="menu-right">
+          <image class="second-icon2" src="/图片素材/1-4我的/右.png"></image>
+        </view>
+      </button>
+    </view>
+    <image class="second-background" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/烟花 1.png"></image>
+  </view>
+</view>

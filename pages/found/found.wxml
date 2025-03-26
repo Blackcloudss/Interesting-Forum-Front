@@ -1,0 +1,58 @@
+
+<view class="container">
+<!-- 第一部分搜索栏：包括1.搜索输入框和2.历史记录 -->
+  <view class="search">  
+   <!--一、 1.搜索输入框 -->
+    <view class="search-bar">
+      <image src="/图片素材/1-2搜索/搜索放大镜.png" class="search-icon" />
+      <input type="text" placeholder="" bindinput="onInput" />
+      <button bindtap="onSearch">搜一下</button>
+    </view>
+
+    <!--一、2. 历史记录 -->
+    <view class="history">
+        <!-- 一、2.1文字：历史记录+图标 -->
+        <view class="history-1">
+          <image src="/图片素材/1-2搜索/历史记录.png" class="history-icon" />
+          <text class="lsjl">历史记录</text>
+        </view>
+        <!--一、2.2 历史记录条目（可滑动） -->
+        <scroll-view class="scroll-history-item" scroll-y="true">
+          <block wx:for="{{history}}" wx:key="index">
+            <view class="history-item">
+              {{item}}
+              <!-- 添加事件，使取消图标有取消功能 -->
+              <image src="/图片素材/1-2搜索/取消.png"class="history-item-icon" data-index="{{index}}" 
+              bindtap="onDeleteHistory"/>
+            </view>
+          </block>
+        </scroll-view>
+    </view>
+  </view>
+
+<!-- 第二部分：今日校园热议+hot图标 -->
+  <view class="hot-topics-title">
+    <image src="/图片素材/1-2搜索/hot.png"class="hot-icon" />
+    <text class="hot-topics-title-text">今日校园热议</text>
+  </view>
+
+<!-- 第三部分：热搜条目 -->
+  <view class="hot-topics">
+    <!-- 热搜条目可滚动 -->
+    <scroll-view class="scroll-hot-topics">
+      <!--三、1. 右下角固定的小屋子（底图） -->
+      <view class="hot-topics-background">
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/底图.png"class="hot-topics-picture" />
+      </view>
+      <!-- 三、2.热搜板块 -->
+      <block wx:for="{{hotTopics}}" wx:key="index">
+        <view class="topic-item">
+          <text data-index="{{index}}" class="topic-number">{{index + 1}}</text>. {{item}}
+        </view>
+      </block>
+    </scroll-view> 
+  </view>
+
+
+
+</view>

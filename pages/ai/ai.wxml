@@ -1,0 +1,98 @@
+<view class="container">
+ <!-- 新增侧边栏 -->
+ <view class="sidebar" style="left: {{showHistory ? '0' : '-300rpx'}};transform:translateX({{showHistory?0:'-100%'}});z-index:1000;">
+    <view class="history-list">
+      <view wx:for="{{historyList}}" wx:key="index" class="history-item" bindtap="searchHistory" data-content="{{item}}">
+        {{item}}
+      </view>
+    </view>
+    <button class="clear-btn" bindtap="clearHistory" style="width: 320rpx;">清除历史记录</button>
+  </view>
+   <!-- 新增遮罩层 -->
+   <view 
+    class="mask" 
+    style="opacity: {{showHistory ? 0.5 : 0}}; pointer-events: {{showHistory ? 'auto' : 'none'}}"
+    bindtap="toggleHistory"
+    catchtouchmove="preventTouch"
+  ></view>
+
+  <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/ai图片/AI.svg" class="bg"></image>
+  <text class="big">哈喽！我是莞工趣AI</text>
+  <text class="small">有什么问题，欢迎询问小趣哟~</text>
+ 
+  <!-- 修改后的small_box -->
+<view class="small_box {{isCollapsed ? 'collapsed' : ''}}" bindtap="toggleCollapse">
+  <!-- 展开状态 -->
+  <block wx:if="{{!isCollapsed}}" >
+  <view class="zhankai">
+    <view class="function-item" catchtap="handleNewChat">
+      <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/ai图片/新对话（浅色）.svg" class="dh"></image>
+      <view class="small_word1">新对话</view>
+    </view>
+
+    <view class="function-item" catchtap="handleHistory">
+      <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/ai图片/历史（浅色）.svg" class="ls"></image>
+      <view class="small_word2">历史</view>
+    </view>
+
+    <!-- 新增收起按钮 -->
+    <view class="collapse-btn" catchtap="toggleCollapse">
+      <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/展开 3.svg" class="collapse-icon"></image>
+    </view>
+</view>
+  </block>
+  <!-- 收起状态 -->
+ <block wx:else>
+    <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/收起 3.svg" class="collapsed-icon"></image>
+  </block>
+</view>
+
+
+
+<!-- 消息展示区域 -->
+<scroll-view class="message-container" scroll-y scroll-with-animation scroll-top="{{scrollTop}}">
+  <block wx:for="{{messages}}" wx:key="timestamp">
+    <!-- 用户消息 -->
+    <view class="message-bubble user" wx:if="{{item.role === 'user'}}">
+      <text>{{item.content}}</text>
+      <image src="cloud://your-path/user-icon.svg" class="avatar"></image>
+    </view>
+    
+    <!-- AI消息 -->
+    <view class="message-bubble ai" wx:else>
+      <image src="cloud://your-path/ai-icon.svg" class="avatar"></image>
+      <text>{{item.content}}</text>
+    </view>
+  </block>
+</scroll-view>
+  <!-- 底部输入区域 -->
+  <view class="input-container">
+    <input 
+      class="input-box" 
+      placeholder="给小趣发送消息，开启趣味对话之旅"
+      bindinput="onInput"
+      value="{{inputValue}}"
+      confirm-type="send"
+      bindconfirm="sendMessage"
+    />
+    <image 
+    src="{{isSending ? 'cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/ai图片/发送 1（浅色）.svg' : 'cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/ai图片/发送 （蓝色）.svg'}}" 
+      class="send-icon {{sendAnim ? 'animate' : ''}}" 
+      bindtap="sendMessage"
+    />
+  </view>
+<!-- 标签栏布局-->
+<scroll-view scroll-x class="model-tabs">
+  <view 
+    wx:for="{{modelList}}" 
+    wx:key="type"
+    class="tab-item {{selectedModel === item.type ? 'active' : ''}}"
+    bindtap="selectModel"
+    data-type="{{item.type}}"
+  >
+    {{item.name}}
+  </view>
+</scroll-view>
+
+
+</view>

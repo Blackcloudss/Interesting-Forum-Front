@@ -1,0 +1,102 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/found/found",
+    "pages/inform/inform",
+    "pages/home/home",
+    "pages/ai/ai",
+    "pages/publish/publish",
+    "pages/post-detail/post-detail"
+  ],
+  "subpackages": [
+    {
+      "root": "packagesA/campus-circle",
+      "pages": [
+        "pages/xyzhinan/xyzhinan",
+        "pages/campusLife/campusLife",
+        "pages/studyExchange/studyExchange",
+        "pages/campusChat/campusChat",
+        "pages/map/map",
+        "pages/more/more",
+        "pages/campusrule/campusrule",
+        "pages/regulations/regulations",
+        "pages/authority/authority"
+      ]
+    },
+    {
+      "root": "packagesA/publish",
+      "pages": [
+        "pages/topicselection/topicselection"
+      ]
+    },
+    {
+      "root": "packagesB/notify",
+      "pages": [
+        "pages/follow/follow",
+        "pages/like/like",
+        "pages/comment/comment",
+        "pages/notification/notification"
+      ]
+    },
+    {
+      "root": "packagesB/home",
+      "pages": [
+        "pages/profile/profile",
+        "pages/set/set",
+        "pages/identity/identity",
+        "pages/about/about",
+        "pages/personal/personal",
+        "pages/personal_/personal_",
+        "pages/know/know",
+        "pages/edit/edit",
+        "pages/feedback/feedback"
+      ]
+    }
+  ],
+  "usingComponents": {
+    "components-post": "/components/post/post",
+    "float-ai-icon": "/components/float-ai-icon/float-ai-icon"
+  },
+  "tabBar": {
+    "selectedColor": "#4a90e2",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "校园圈",
+        "iconPath": "/图片素材/首页/botton-change/校园圈（灰色）.png",
+        "selectedIconPath": "/图片素材/首页/botton-change/校园圈.png"
+      },
+      {
+        "pagePath": "pages/found/found",
+        "text": "发现",
+        "iconPath": "/图片素材/首页/botton-change/发现（灰色）.png",
+        "selectedIconPath": "/图片素材/首页/botton-change/发现.png"
+      },
+      {
+        "pagePath": "pages/publish/publish",
+        "text": "发布",
+        "iconPath": "/图片素材/首页/botton-change/发布.png"
+      },
+      {
+        "pagePath": "pages/inform/inform",
+        "text": "通知",
+        "iconPath": "/图片素材/首页/botton-change/通知（灰色）.png",
+        "selectedIconPath": "/图片素材/首页/botton-change/通知.png"
+      },
+      {
+        "pagePath": "pages/home/home",
+        "text": "小窝",
+        "iconPath": "/图片素材/首页/botton-change/小窝（灰色）.png",
+        "selectedIconPath": "/图片素材/首页/botton-change/小窝.png"
+      }
+    ]
+  },
+  "window": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#ffffff"
+  },
+  "style": "v2",
+  "lazyCodeLoading": "requiredComponents",
+  "navigationStyle": "custom"
+}

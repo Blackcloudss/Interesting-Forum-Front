@@ -1,0 +1,214 @@
+/* 通用样式 */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5; 
+  padding: 2vh;
+  overflow: hidden; /* 防止内容超出容器 */
+}
+/* 顶部固定区域 */
+.header-section {
+  background: #f5f5f5;
+  z-index: 100;
+  position: relative;
+}
+
+/* 滚动区域 */
+.main-scroll {
+  flex: 1;
+  overflow-y: auto;
+  box-sizing: border-box;
+  transition: height 0.3s ease;
+}
+.features {
+  display: grid;
+  width: 50vh;
+  height: 30vh;
+  background-color: #f2faff;  
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 10px;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.features-hidden {
+  height: 0 !important;
+  padding: 0;
+  overflow: hidden;
+}
+/* 公告 */
+.notice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 4vh;
+  background-color: #f2faff;
+  
+}
+
+/* 滚动文字容器 */
+.marquee-notice {
+  width: 55vh;
+  overflow: hidden;
+  position: relative;
+  height: 4vh;
+  line-height: 10px;
+  background-color: #fff;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+/* 滚动文字样式 */
+.marquee-text {
+  white-space: nowrap;
+  position: absolute;
+  color: #333;
+  font-size: 14px;
+  left: 100%; /* 初始位置在右侧 */
+  will-change: transform; /* 启用硬件加速 */
+  transition: transform 0.001s linear; /* 平滑重置位置 */
+}
+
+/* 弹出框样式 */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 80%;
+  max-width: 300px;
+}
+
+.popup-text {
+  margin-bottom: 20px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  font-size: 14px;
+}
+
+.popup-button {
+  width: 100%;
+  padding: 8px 0;
+  background-color: #1aad19;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+}
+.feature-item {
+  display: flex;
+  width: 160px;
+  height: 70px;
+  border-radius: 50px;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  padding: 0px;
+  text-align: center;
+}
+
+.feature-item:nth-child(1) {
+  background-color: #fefff6;  
+}
+
+.feature-item:nth-child(2) {
+  background-color: #dff5f9; 
+}
+
+.feature-item:nth-child(3) {
+  background-color: #d9f5d5; 
+}
+
+.feature-item:nth-child(4) {
+  background-color: #fef6e2; 
+}
+
+.feature-icon {
+  display: flex;
+  width: 70px;
+  height: 70px; 
+  margin-bottom: 5px;
+}
+
+.feature-text {
+  margin-left: 5px;
+} 
+
+.feature-title {
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.feature-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+.posts {
+  flex: 1;
+  overflow: hidden;  
+  /* width: 55vh; */
+  /* background-color: red; */
+  margin-bottom: -12vh;
+ 
+}
+/* 滚动区域 */
+.scroll-view {
+  flex: 1;
+  overflow-y: auto;
+}
+/* 修改后的滚动区域样式 */
+.scroll-container {
+  margin-top: 20px;
+  height: calc(100vh - 10px);
+  transition: all 0.3s ease; /* 添加过渡动画 */
+}
+
+.scroll-container-hidden {
+  margin-top: 10px !important;
+  height: calc(100vh - 15vh) !important;
+}
+/* 切换按钮样式 */
+.toggle-button {
+  position: absolute; 
+  top: 0px;
+  left: -40px;
+  z-index: 10;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  margin: 0 auto;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.toggle-icon {
+  width: 20px;
+  height: 20px;
+}
