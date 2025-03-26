@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="qrcode-container">
+    <image class="qrcode-image" src="{{qrcodeSrc}}" mode="aspectFit"></image>
+  </view>
+</view>

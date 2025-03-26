@@ -1,0 +1,13 @@
+<view class="container">
+  <view class="icon-container {{showPopup ? 'active' : ''}}" bindtap="togglePopup">
+    <!-- 可替换为你自己的图标 -->
+    <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/ai图片/AI.svg" class="icon" mode="widthFix"></image>
+  </view>
+
+  <view class="popup-box {{showPopup ? 'show' : ''}}" catchtap="navigateToAI">
+    <view class="popup-content">
+      <text class="text">AI界面</text>
+      <view class="triangle"></view>
+    </view>
+  </view>
+</view>

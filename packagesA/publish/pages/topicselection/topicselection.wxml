@@ -1,0 +1,63 @@
+<view class="container">
+  <view class="box1">
+    <view class="left">
+      <image src="/图片素材/发布页面/发布2/校园生活（图标）.png" class="gift"></image>
+      <view class="campus_life1">校园</view>
+      <view class="campus_life2">生活</view>
+      <view class="campus_life3">吃喝玩乐大合集</view>
+    </view>
+
+    <view class="right">
+      <view class="middle_box"></view>
+      <view class="shuxian1"></view>
+      <view class="shuxian2"></view>
+      <view class="shuxian3"></view>
+      <image class="zuo1" src="/图片素材/发布页面/发布2/二手交易.png"></image>
+      <image class="zuo2" src="/图片素材/发布页面/发布2/爱心.png"></image>
+      <image class="zuo3" src="/图片素材/发布页面/发布2/跑腿代拿 1.png"></image>
+      <image class="you1" src="/图片素材/发布页面/发布2/失物招领 1.png"></image>
+      <image class="you2" src="/图片素材/发布页面/发布2/吃喝玩乐频道 2.png"></image>
+      <image class="you3" src="/图片素材/发布页面/发布2/兼职招聘 1.png"></image>
+      <text class="left1 " bindtap="selectTopic" data-topic="二手交易">二手交易</text>
+      <text class="left2" bindtap="selectTopic" data-topic="爱心校园">爱心校园</text>
+      <text class="left3" bindtap="selectTopic" data-topic="跑腿代拿">跑腿代拿</text>
+      <text class="right1" bindtap="selectTopic" data-topic="失物招领">失物招领</text>
+      <text class="right2" bindtap="selectTopic" data-topic="吃喝玩乐">吃喝玩乐</text>
+      <text class="right3" bindtap="selectTopic" data-topic="兼职招聘">兼职招聘</text>
+    </view>
+  </view>
+
+  <view class="box2">
+    <view class="right_1">
+      <image class="book" src="/图片素材/发布页面/发布2/学习交流.png"></image>
+    </view>
+    <view class="hengxian1"></view>
+    <view class="shuxian4"></view>
+    <view class="shuxian5"></view>
+    <image class="zuo1_" src="/图片素材/发布页面/发布2/资料分享.png"></image>
+    <image class="zuo2_" src="/图片素材/发布页面/发布2/赛事大全.png"></image>
+    <image class="you1_" src="/图片素材/发布页面/发布2/课程评价 1.png"></image>
+    <image class="you2_" src="/图片素材/发布页面/发布2/答疑解惑.png"></image>
+    <text class="left1_" bindtap="selectTopic" data-topic="资料分享">资料分享</text>
+    <text class="left2_" bindtap="selectTopic" data-topic="赛事大全">赛事大全</text>
+    <text class="right1_" bindtap="selectTopic" data-topic="课程评价">课程评价</text>
+    <text class="right2_" bindtap="selectTopic" data-topic="答疑解惑">答疑解惑</text>
+  </view>
+
+  <view class="box3">
+    <view class="right_2">
+      <image class="planet" src="/图片素材/发布页面/发布2/校园杂谈.png"></image>
+    </view>
+    <view class="hengxian2"></view>
+    <view class="shuxian6"></view>
+    <view class="shuxian7"></view>
+    <image class="zuo1_" src="/图片素材/发布页面/发布2/发布表白 1.png"></image>
+    <image class="zuo2_" src="/图片素材/发布页面/发布2/找搭子-copy 1.png"></image>
+    <image class="you1_" src="/图片素材/发布页面/发布2/打听求助.png"></image>
+    <image class="you2_" src="/图片素材/发布页面/发布2/其他 1.png"></image>
+    <text class="left1_" bindtap="selectTopic" data-topic="表白">表白</text>
+    <text class="left2_" bindtap="selectTopic" data-topic="找搭子">找搭子</text>
+    <text class="right1_" bindtap="selectTopic" data-topic="求助打听">求助打听</text>
+    <text class="right2_" bindtap="selectTopic" data-topic="其他">其他</text>
+  </view>
+</view>

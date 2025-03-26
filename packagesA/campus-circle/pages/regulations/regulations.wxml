@@ -1,0 +1,38 @@
+<view class="container">
+  <!-- 学生手册 -->
+  <view class="box1" bindtap="showModal">
+  <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/pictures/学生手册+渐变背景.png" mode="aspectFill" class="box1-image"></image>
+</view>
+
+  <!-- 教学管理规定 -->
+  <view class="box2">
+    <text class="box2-title">教学管理规定</text>
+    <view class="card-group">
+      <view 
+        class="card" 
+        wx:for="{{regulations}}" 
+        wx:key="id"
+        data-link="{{item.link}}"
+        bindtap="showRegulationModal">
+        <text class="card-text">{{item.text}}</text>
+        <image src="/images/arrow-right.png" class="card-icon" />
+      </view>
+    </view>
+  </view> 
+  </view>
+
+<!-- 通用模态框 -->
+<view class="custom-modal" wx:if="{{showModal}}">
+    <view class="modal-mask" bindtap="hideModal"></view>
+    <view class="modal-content">
+      <text class="modal-title">点击复制以下链接：</text>
+      <view class="link-container">
+        <text class="modal-link">{{linkToCopy}}</text>
+        <button class="copy-btn" bindtap="copyLink" style="width: 160rpx;">
+          <text class="copy-text">复制链接</text>
+        </button>
+      </view>
+      <button class="close-btn" bindtap="hideModal">关闭</button>
+    </view>
+  </view>
+

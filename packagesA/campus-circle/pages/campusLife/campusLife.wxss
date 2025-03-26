@@ -1,0 +1,116 @@
+.container {
+  padding: 10px;
+}
+.navbar {
+  display: flex;
+  width: 380px;
+  height: 50px;
+  justify-content: space-around;
+  background-color: #84f8fc;
+  background-image: linear-gradient(
+    to right,
+    #84f8fc,
+    #b1fafd,
+    #d8fdfe,
+    #f9ffff
+  );
+  padding: 10px 0;
+  border:2px solid #d9d9d9 ;
+  border-radius: 20px;
+  position: fixed;/*使用固定定位*/
+  top: 0px; /*固定在视口底部*/
+  /* 设置组件层级 */
+  z-index: 1;
+}
+
+.nav-item {
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 15px;
+  /* flex: 0 0 auto; */
+}
+
+.nav-item.active {
+  font-weight: 700;
+  border-bottom: 2px solid #007aff; /* 选中标签的下划线 */
+}
+
+.posts {
+  flex: 1;
+  height: 800px;
+  width: 360px;
+  padding: 10px;
+  overflow-y: scroll;
+  overflow-y: auto; /* 允许内容区域滚动 */
+  background-color: #f5f5f5;
+}
+.post {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  
+}
+.post-icon{
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 0px;
+  top: -10px;
+}
+.post:first-child{
+  margin-top: 5px;
+}
+.post-header {
+  display: flex;
+  align-items: center;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+}
+.post-info .username {
+  font-size: 14px;
+  font-weight: bold;
+}
+.post-info .timestamp {
+  font-size: 12px;
+  color: #888;
+}
+.post-content {
+  margin: 10px 0;
+  font-size: 14px;
+}
+.post-actions {
+  display: flex;
+  justify-content:space-between;
+}
+.action {
+  display: flex;
+}
+.action-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+.action-class{
+  width: 60px;
+  height: 20px;
+  margin-right: 0px;
+}
+
+/* 固定滚动区域 */
+.scroll-container{
+  margin-top: 70px;/*给固定导航留出空间*/
+}
+
+
+
+
+
+

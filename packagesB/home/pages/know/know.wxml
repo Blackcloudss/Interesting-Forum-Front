@@ -1,0 +1,24 @@
+<view class="container">
+  <view class="box1"></view>
+  <view class="box2"></view>
+  <text class="title">请阅读认证须知</text>
+  <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/笑脸 1.svg" class="smile"></image>
+  <view class="box3">
+    <scroll-view class="scroll-content" scroll-y="true">
+    <view class="words" >
+  <view class="indent">您好！莞工趣坛是专为<text style="color:#6ca5e8" >东莞理工学院学生</text>打造的生活服务小程序，涵盖<text style="color:#6ca5e8" >社交、闲置交易、校园资讯</text>等功能，致力为您的校园生活增色添彩。为保障平台安全与秩序，营造良好的交流环境，我们需要进行身份认证。</view>
+  <view class="indent">根据 2017 年网信办《互联网论坛社区服务管理规定》，我们会通过学号、学生证等信息进行身份认证。您的所有个人隐私信息都将受到相关法律法规和<text style="color:#6ca5e8" >《莞工趣坛隐私政策》</text>严格保护，依据《中华人民共和国民法典》、《中华人民共和国网络安全法》、《中华人民共和国数据安全法》、《中华人民共和国个人信息保护法》等法律法规，我们承诺：您的信息仅用于身份认证和为您提供平台服务，不会泄露给任何第三方，更不会用于其他用途。</view>
+   <view class="indent">同时，依据 2005 年教育部关于加强高校校园论坛管理的通知，在您使用<text style="color:#6ca5e8" >校园社交、闲置交易</text>等功能前，需提交学生证等证明材料，以确认您的学生身份。这些证明材料仅用于身份验证，同样受到严格保护，不会被采集隐私信息，也不会泄露或挪作他用。</view>
+   <view class="indent">另外，按照《微信小程序平台运营规范》要求，我们在收集信息前必须征得您同意，并明确信息使用范围和目的。</view>
+   <view class="indent">莞工趣谈始终将您的隐私安全放在首位，严格遵守各项规定，全力为您提供<text style="color:#6ca5e8" >安全、便捷</text>的校园生活服务。感谢您的理解与支持！</view>
+    </view>
+  </scroll-view>
+  <view class="btn">
+  <!-- 导航按钮，点击后跳转到 targetPage 页面 -->
+  <navigator url="/packagesB/home/pages/personal/personal" class="nav-button">
+    同意，下一步
+  </navigator>
+  <navigator open-type="navigateBack" class="no">不同意，返回</navigator>
+</view>
+  </view>
+</view>

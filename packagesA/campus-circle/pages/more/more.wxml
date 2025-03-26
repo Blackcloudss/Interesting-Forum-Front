@@ -1,0 +1,21 @@
+<!-- WXML -->
+<view class="container">
+  <scroll-view 
+    class="contact-container" 
+    scroll-y 
+    style="height: 1450rpx;">
+    <view class="contact-item" wx:for="{{contactList}}" wx:key="id">
+        <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/pictures/电话.svg" mode="widthFix" class="contact-icon"></image>
+        
+        <view class="text-container">
+            <text class="sub-title">{{item.title}}</text>
+            <text class="contact-text">{{item.info}}</text>
+        </view>
+        
+        <button class="copy-btn" data-info="{{item.info}}" bindtap="copyContactInfo"
+        style="width: 100rpx;">
+            复制
+        </button>
+    </view>
+  </scroll-view>
+</view>

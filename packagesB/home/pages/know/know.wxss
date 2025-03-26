@@ -1,0 +1,81 @@
+.container{
+  height: 100vh;
+  background-color: #cae2ff;
+  overflow:hidden;
+  position: relative;
+}
+.box1{
+  height: 500rpx;
+  width:55vh;
+  background-color: #16a9fa;
+  position: absolute;
+  margin-top: -200rpx;
+}
+.box2{
+  position: absolute;
+  background-color: #cae2ff;
+  height: 300rpx;
+  width:55vh;
+  margin-top: 70rpx;
+  border-top-left-radius: 250rpx;
+  border-top-right-radius: 250rpx;
+  z-index: 10;
+}
+.title{
+  z-index: 1;
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-top: -170rpx;
+  color:white;
+}
+.box3{
+  height: 1130rpx;
+  padding: 30rpx;
+  width:590rpx;
+  background-color: white;
+  margin-top: -90rpx;
+  position: absolute;
+  z-index: 10;
+  border-radius: 50rpx;
+}
+.words{
+  position: absolute;
+  display: block;
+  white-space: pre-line;
+  margin-right: 10rpx;
+}
+.indent{
+  text-indent:2em ;
+  word-wrap: break-word;
+}
+
+.scroll-content {
+  height: 100%; /* 滚动区域占满白色框的高度 */
+  width: 100%; /* 滚动区域占满白色框的宽度 */
+}
+
+
+.nav-button {
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-top:50rpx;
+  margin-left: 145rpx;
+  width:230rpx;
+  background-color: #16a9fa;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 16px;
+  text-align: center;
+}
+.no{
+  color:#94979b;
+  text-align: center;
+}
+.smile{
+  position: absolute;
+  z-index: 20;
+  width: 80rpx;
+  height: 80rpx;
+  margin-top: -180rpx;
+  margin-left: 430rpx;
+}

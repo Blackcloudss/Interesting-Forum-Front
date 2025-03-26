@@ -1,0 +1,39 @@
+.container{
+  height: 100vh;
+  background-color: #cae2ff;
+}
+.box{
+  height: 1200rpx;
+  padding: 30rpx;
+  width:590rpx;
+  background-color: white;
+  margin-top: -150rpx;
+  border-radius: 50rpx;
+  
+}
+.scroll-content {
+  height: 100%; /* 滚动区域占满白色框的高度 */
+  width: 100%; /* 滚动区域占满白色框的宽度 */
+}
+.nav-button {
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-top:20rpx;
+  margin-left: -160rpx;
+  width:230rpx;
+  background-color: #16a9fa;
+  color: white;
+  border-radius: 50rpx;
+  font-size: 16px;
+  text-align: center;
+  position: absolute;
+}
+.no{
+  color:#94979b;
+  margin-left: -100rpx;
+  margin-top: 110rpx;
+  position: absolute;
+}
+.foot{
+  margin-left:250rpx ;
+}

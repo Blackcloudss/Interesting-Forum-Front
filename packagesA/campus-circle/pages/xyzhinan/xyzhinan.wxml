@@ -1,0 +1,25 @@
+<view class="container">
+  <view class="box" bindtap="navigateTo" data-page="map">
+    <image class="background-image" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图.png" />
+    <view class="content">
+      <image class="icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图 1.svg" />
+      <text class="title">校园地图</text>
+    </view>
+  </view>
+
+  <view class="box" bindtap="navigateTo" data-page="regulations">
+    <image class="background-image" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/规章制度.png" />
+    <view class="content">
+      <image class="icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/规章制度 1.svg" />
+      <text class="title">规章制度</text>
+    </view>
+  </view>
+
+  <view class="box" bindtap="navigateTo" data-page="authority">
+    <image class="background-image" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/官方通道.png" />
+    <view class="content">
+      <image class="icon" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图 1.svg" />
+      <text class="title">官方通道</text>
+    </view>
+  </view>
+</view>

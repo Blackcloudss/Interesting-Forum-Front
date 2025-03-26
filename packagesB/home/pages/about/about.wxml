@@ -1,0 +1,11 @@
+<!--pages/aboutus/aboutus.wxml-->
+<view class="container">
+  <view class="box">
+    <view class="indented-text">莞工趣坛，一款专为<text style="color:#4a90e2">东莞理工学院学子</text>量身打造的校园论坛小程序。我们聚焦<text style="color:#4a90e2">校园生活</text>，深度整合校内资讯，为学生提供精准便捷的信息服务。</view>
+    <view class="indented-text">莞工趣坛涵盖<text style="color:#4a90e2">校园指南、校园生活、学习交流和校园杂谈</text>等多功能模块，全方位满足学生需求。校园指南提供详尽的校园信息，包括学校规章制度、教学楼分布及周边美食娱乐，助力新生快速融入校园；校园生活板块致力于提升学生校园生活的便利性，为学生提供丰富的校园活动信息和互动交流平台；学习交流板块为学生打造高效的学习空间，分享学习资源和经验；校园杂谈板块鼓励学生分享见解，增进交流。</view>
+    <view class="indented-text">我们旨在为学生打造一个<text style="color:#4a90e2">全面、便捷、互动</text>的校园生活平台，助力学生在东莞理工学院的校园生活中不断成长与进步。</view>
+    <view class="foot">  
+      <text>\n\n\n——2025莞工趣坛运营团队</text>
+    </view>
+  </view>
+</view>

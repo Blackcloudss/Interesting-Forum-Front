@@ -1,0 +1,73 @@
+<!-- 官方通道 -->
+<view class="box1">
+  <view class="grid-item" wx:for="{{menuList}}" wx:key="id" data-url="{{item.url}}" bindtap="handleClick">
+    <image src="{{item.icon}}" 
+    mode="widthFix"></image>
+    <text>{{item.name}}</text>
+  </view>
+</view>
+<!-- 官方联系方式 -->
+<view class="box2">
+    <!-- 标题行 -->
+    <view class="title-row">
+        <text class="title">官方联系方式</text>
+        <text class="more" bindtap="navigateToNewPage">查看更多</text>
+    </view>
+    
+    <!-- 联系信息块 -->
+    <view class="contact-item" wx:for="{{contactList}}" wx:key="id">
+        <image src="{{item.icon}}" mode="widthFix" class="contact-icon"></image>
+        
+        <view class="text-container">
+            <text class="sub-title">{{item.title}}</text>
+            <text class="contact-text">{{item.info}}</text>
+        </view>
+        
+        <button class="copy-btn" data-info="{{item.info}}" bindtap="copyContactInfo"
+        style="width: 100rpx;">
+            复制
+        </button>
+    </view>
+</view>
+<view class="box3">
+  <!-- 顶部标题和标签栏 -->
+  <text class="title_">官方服务号</text>
+  <scroll-view scroll-x scroll-with-animation class="tabs-container"
+  >
+  <view scroll-y class="tab-item" wx:for="{{tabs}}" wx:key="index"  class="tab-item {{currentTab === index ? 'active' : ''}}" bindtap="switchTab" data-index="{{index}}">
+    {{item}}
+  </view>
+</scroll-view>
+  <!-- 内容区域 -->
+  <swiper current="{{currentTab}}" 
+  bindchange="onSwiperChange" 
+  style="height:{{contentHeight}}px" bindchange="onSwiperChange">
+  <swiper-item wx:for="{{tabs}}" wx:key="index">
+    <scroll-view scroll-y style="height:100%">
+    <!-- 动态内容 -->
+    <view class="content-item">
+      <!-- 表单条目 -->
+           <!-- 卡片内容 -->
+      <view class="card" wx:for="{{currentItems}}" wx:key="id" >
+        <image src="{{item.icon}}" class="icon" style="width:70rpx;height:70rpx"></image>
+        <text class="text">{{item.text}}</text>
+        <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/pictures/二维码.svg" 
+          class="more-icon" 
+          bindtap="showModal" 
+          data-qrcode="{{item.qrCodeUrl}}"
+          style="width:70rpx;height:70rpx" />
+      </view>
+    </view>
+  </scroll-view>
+  </swiper-item>
+</swiper>
+<!-- 自定义模态框 -->
+<view class="modal-mask" wx:if="{{showModal}}" 
+  bindtap="hideModal" catchtouchmove="preventTouchMove">
+</view>
+<view class="modal-dialog" wx:if="{{showModal}}">
+  <image src="{{qrCodeUrl}}" class="qr-code"></image>
+  <button class="close-btn" bindtap="hideModal">关闭</button>
+</view>
+</view>
+

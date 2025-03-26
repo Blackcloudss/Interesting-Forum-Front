@@ -1,0 +1,116 @@
+.container {
+  padding: 10rpx;
+  background-color: rgb(245, 245, 245);
+  height:100vh;
+}
+
+.section {
+  margin-top:-90rpx;
+  border-radius: 35rpx;
+  padding: 0px;
+  background-color: white;
+  border:1.5px #f78f91 solid;
+}
+
+.section-title {
+  font-size: 17px;
+  margin-bottom: 108rpx;
+  margin-top: 20rpx;
+  margin-left:-570rpx;
+  /* background-color: aquamarine; */
+}
+
+.section-content {
+  display: flex;
+  flex-direction: column;
+  width: 700rpx;
+  /* background-color: antiquewhite; */
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  height:100rpx;
+  /* margin-bottom: 10px; */
+  /* background-color: plum; */
+}
+.jiantou{
+  position: absolute;
+  margin-left:640rpx;
+  width: 40rpx;
+  height: 40rpx;
+  border: white;
+}
+
+.item-label {
+  width: 80px;
+  margin-left: 30rpx;
+}
+
+/* 输入项值区域样式 */
+.item-value {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  width: 550rpx;
+  margin-left: 90rpx;
+}
+
+/* 头像和背景图片样式 */
+image {
+  height: 85rpx;
+  border-radius: 50%;
+  border: 1px solid #eee;
+  object-fit: cover;
+  margin-left:470rpx;
+      /*直接设置文本右对齐 */
+      text-align: right; 
+      flex: 1; /* 占据剩余空间，确保对齐效果 */
+}
+
+/* 输入框样式 */
+input {
+  flex: 1;
+  font-size: 16px;
+  color: rgb(139, 139, 139);
+  margin-left:300rpx;
+    /*直接设置文本右对齐 */
+    text-align: right; 
+    flex: 1; /* 占据剩余空间，确保对齐效果 */
+  /* background-color: red; */
+}
+
+
+
+/* 保存按钮样式 */
+.save-button {
+  border-radius: 10px;
+  font-size: 40rpx;
+  margin-bottom: 60rpx;
+}
+.save-button:active {
+  background-color: #0056b3;
+}
+/* 分割线 */
+.divider {
+  height: 1px;
+  margin-left: 20rpx;
+  background-color: #cfcfcf;
+  width:670rpx;
+}
+
+/* 选择器显示值的样式 */
+.picker-value {
+  font-size: 16px;
+  color: black;
+}
+/* 选择器默认值样式 */
+.xuanzeqi{
+  font-size: 16px;
+  width:600px;
+  color: rgb(139, 139, 139);
+      /*直接设置文本右对齐 */
+      text-align: right; 
+      flex: 1; /* 占据剩余空间，确保对齐效果 */
+}

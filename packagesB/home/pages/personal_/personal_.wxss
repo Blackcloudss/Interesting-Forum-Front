@@ -1,0 +1,28 @@
+/* pages/personal_/personal_.wxss */
+.container{
+  height: 100vh;
+  background-color: #cae2ff;
+}
+.box{
+  height: 1350rpx;
+  padding: 30rpx;
+  width:590rpx;
+  background-color: white;
+  margin-top: -150rpx;
+  border-radius: 50rpx;
+  
+}
+.scroll-content {
+  height: 100%; /* 滚动区域占满白色框的高度 */
+  width: 100%; /* 滚动区域占满白色框的宽度 */
+}
+
+.no{
+  color:#94979b;
+  margin-left: -100rpx;
+  margin-top: 110rpx;
+  position: absolute;
+}
+.foot{
+  margin-left:250rpx ;
+}

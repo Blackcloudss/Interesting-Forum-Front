@@ -1,0 +1,70 @@
+<view class="container">
+  <view class="background">
+    <image class="background-suse" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/背景图.jpg"></image>
+  </view>
+  <view class="second-part">
+    <view class="header">
+      <image class="touxiang" src="/图片素材/post-icon/touxiang/默认头像.webp"></image>
+      <text class="title">Pursue</text>
+      <image class="sex-icon" src="/图片素材/1-4我的/性别-女 1.png"></image>
+    </view>
+    <view class="signature">
+      <text>{{signature}}</text>
+      <view class="edit-signature">
+        <button  class="button1"><image class="write-icon" src="/图片素材/1-5我的主页/写 1.png"></image></button>
+      </view>
+    </view>
+    <view class="info">
+      <image class="id-icon" src="/图片素材/1-5我的主页/学号 1.png"></image>
+      <text class="id">{{id}}</text>
+      <image class="college-icon" src="/图片素材/1-5我的主页/学院 1.png"></image>
+      <text class="college">{{college}}</text>
+    </view>
+    
+    <view class="edit">
+      <image class="edit-icon" src="/图片素材/1-5我的主页/编辑 1.png"></image>
+      <button bindtap="showEditInfoModal" class="button2">编辑资料</button>
+    </view>
+    
+    
+  </view> 
+  <view class="third-part">
+   <view class="third-part1">
+      <view class="tabs">
+        <button class="tab-button {{currentTab === 'posts' ? 'active' : ''}}" bindtap="showPosts">
+        <image class="showPosts-icon" src="/图片素材/1-5我的主页/贴子.png"></image>
+        我的帖子
+        </button>
+        <button class="tab-button {{currentTab === 'favorites' ? 'active' : ''}}" bindtap="showFavorites">
+          <image class="showFavorites-icon" src="/图片素材/1-5我的主页/收藏 1.png"></image>
+        我的收藏
+        </button>
+      </view>
+    
+      <view class="posts">
+        <block wx:if="{{currentTab === 'posts'}}">
+          <block wx:for="{{posts}}" wx:key="index">
+            <view class="post">
+              <view class="post-top">
+                <image class="my-toux" src="/图片素材/post-icon/touxiang/默认头像.webp"></image>
+                <text class="post-time">{{item.date}}</text>
+              </view>
+              <text class="post-content">{{item.content}}</text>
+            </view>
+          </block>
+        </block>
+        <block wx:if="{{currentTab === 'favorites'}}">
+          <block wx:for="{{favorites}}" wx:key="index">
+            <view class="post">
+              <view class="favorites-top">
+                <image class="others-toux" src="/图片素材/post-icon/touxiang/默认头像.webp"></image>
+                <text class="favorites-time">{{item.date}}</text>
+              </view>
+              <text class="favorites-content">{{item.content}}</text>
+            </view>
+          </block>
+        </block>
+      </view>
+    </view>
+  </view>
+</view>

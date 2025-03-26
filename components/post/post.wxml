@@ -1,0 +1,29 @@
+<view class="post" catch:tap="onPostClick" data-postId="{{postId}}">
+  <image src="/图片素材/post-icon/帖子右上角.png" class="post-icon" />
+  <view class="post-header">
+    <image src="{{avatar}}" class="avatar" />
+    <view class="post-info">
+      <text class="username">{{username}}</text>
+      <view class="timestamp"><text>{{time}}</text></view>
+    </view>
+  </view>
+  <view class="post-content">
+    <text>{{content}}</text>
+  </view>
+
+
+
+  <view class="post-actions">
+    <view class="action">
+      <image src="{{avatarl}}" class="action-class" />
+    </view>
+    <view class="action">
+      <image class="action-icon {{isLiked ? 'liked' : ''}}" src="/图片素材/post-icon/点赞.png" bindtap="handleLike" data-id="{{id}}" />
+      <text>{{likes}}</text>
+      <image src="/图片素材/post-icon/评论.png" class="action-icon" />
+      <text>{{comments}}</text>
+      <image src="/图片素材/post-icon/收藏1 1.png" class="action-icon" />
+      <text>{{collects}}</text>
+    </view>
+  </view>
+</view>

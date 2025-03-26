@@ -1,0 +1,104 @@
+<view class="container">
+  <!-- 第一个板块：头像、昵称、背景 -->
+  <view class="section-title">个人信息</view>
+  <view class="section">
+    <view class="section-content">
+      <!-- 头像 -->
+      <view class="item">
+        <view class="item-label">头像</view>
+        <view class="item-value">
+          <image src="{{avatarUrl}}" mode="aspectFill" bindtap="chooseAvatar"></image>
+        </view>
+        <image class="jiantou" src="/进入符号.svg"></image>
+      </view>
+      <view class="divider"></view>
+      <!-- 昵称 -->
+      <view class="item">
+        <view class="item-label">昵称</view>
+        <view class="item-value">
+          <input type="text" value="{{nickname}}" bindinput="onNicknameInput" placeholder="请输入昵称" />
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 个性签名 -->
+      <view class="item">
+        <view class="item-label">个性签名</view>
+        <view class="item-value">
+          <input type="text" value="{{signature}}" bindinput="onSignatureInput" maxlength="30" placeholder="请输入个性签名" />
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 性别 -->
+      <view class="item">
+        <view class="item-label">性别</view>
+        <view class="item-value">
+          <picker class="xuanzeqi" mode="selector" range="{{genders}}" value="{{genderIndex}}" bindchange="onGenderChange">
+          <view class="sex">{{genders[genderIndex]}}</view>
+        </picker>
+        </view>
+        <image class="jiantou" src="/进入符号.svg"></image>
+      </view>
+    </view>
+  </view>
+
+      
+
+  <!-- 第三个板块：认证信息 -->
+  <view class="section-title">认证信息</view>
+  <view class="section">
+    <view class="section-content">
+      <!-- 真实姓名 -->
+      <view class="item">
+        <view class="item-label">真实姓名</view>
+        <view class="item-value">
+          <input type="text" value="{{realName}}" bindinput="onRealNameInput" disabled />
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 学号 -->
+      <view class="item">
+        <view class="item-label">学号</view>
+        <view class="item-value">
+          <input type="text" value="{{studentIdDisplay}}" disabled />
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 院系 -->
+      <view class="item">
+        <view class="item-label">院系</view>
+        <view class="item-value">
+          <picker class="xuanzeqi" mode="selector" range="{{departments}}" value="{{departmentIndex}}" bindchange="onDepartmentChange" disabled>
+          <view class="yuanxi">{{departments[departmentIndex]}}</view>
+        </picker>
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 专业 -->
+      <view class="item">
+        <view class="item-label">专业</view>
+        <view class="item-value">
+          <input type="text" value="{{major}}" bindinput="onMajorInput" disabled />
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 入学年份 -->
+      <view class="item">
+        <view class="item-label">入学年份</view>
+        <view class="item-value">
+          <picker class="xuanzeqi" mode="selector" range="{{enrollmentYears}}" value="{{enrollmentYearIndex}}" bindchange="onEnrollmentYearChange" disabled>
+          <view class="ruxuenianfen">{{enrollmentYears[enrollmentYearIndex]}}</view>
+        </picker>
+        </view>
+      </view>
+      <view class="divider"></view>
+      <!-- 手机号 -->
+      <view class="item">
+        <view class="item-label">手机号</view>
+        <view class="item-value">
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 保存按钮 -->
+  <button type="primary" class="save-button" bindtap="saveProfile" >保存</button>
+</view>

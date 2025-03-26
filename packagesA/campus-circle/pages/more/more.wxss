@@ -1,0 +1,77 @@
+/* pages/more/more.wxss */
+.container{
+  height: 100vh;
+  position: fixed;
+  padding: 0rpx; /* 清除默认内边距 */
+  margin: 0; /* 清除默认外边距 */
+}
+.contact-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 650rpx;
+  padding: 10rpx 40rpx;
+  border-bottom: 1rpx solid #f0f0f0;
+  /* background-color: chocolate; */
+}
+
+.contact-icon {
+  width: 60rpx;
+  height: 60rpx;
+  margin-right: 20rpx;
+}
+
+.text-container {
+  flex: 1;
+}
+
+.sub-title {
+  font-size: 28rpx;
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 8rpx;
+  display: block;
+}
+
+.contact-text {
+  font-size: 24rpx;
+  color: #666;
+  line-height: 1.4;
+  display: block;
+}
+
+.copy-btn {
+  height: 25px;
+  padding: 8rpx 20rpx;
+  font-size: 24rpx;
+  color: #409eff;
+  border-radius: 16rpx;
+  background-color: #f5f5f5;
+  margin-left: 800rpx;
+  margin-top: 30rpx;
+}
+.card {
+  height: 140rpx;
+  width: 620rpx;
+  margin: 20rpx 30rpx;
+  padding: 20rpx;
+  background: white;
+  display: flex;
+  align-items: center;
+}
+.icon {
+  width: 20rpx !important;
+  height: 20rpx !important;
+  margin-right: 30rpx;
+}
+.text {
+  flex: 1;
+  font-size: 28rpx;
+  line-height: 1.6;
+  white-space: pre-wrap;
+}
+
+.more-icon {
+  width: 60rpx !important;
+  height: 60rpx !important;
+}

@@ -1,0 +1,73 @@
+.post {
+  position: relative;
+  background-color: #fff;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  padding: 10px;
+  border: 2px solid #efefef;
+}
+/* 组件样式 */
+.action-icon.liked {
+  filter: brightness(0) saturate(100%) invert(27%) sepia(51%) saturate(2878%) hue-rotate(346deg) brightness(104%) contrast(97%);
+}
+.post-icon {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: 0px;
+  top: -10px;
+}
+
+.post-header {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  margin-right: 10px;
+  /* background-color: red; */
+}
+
+.post-info .username {
+  font-size: 14px;
+  font-weight: bold;
+  /* background-color: pink; */
+}
+
+.post-info .timestamp {
+  font-size: 12px;
+  color: #888;
+  /* background-color: green; */
+}
+
+.post-content {
+  margin: 10px 0;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action {
+  display: flex;
+}
+
+.action-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.action-class {
+  width: 60px;
+  height: 20px;
+  margin-right: 0px;
+}

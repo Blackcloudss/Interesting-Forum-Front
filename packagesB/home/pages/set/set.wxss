@@ -1,0 +1,111 @@
+/* pages/set/set.wxss */
+.container{
+  height: 100vh;
+  background-color: #cae2ff;
+  z-index: -1;
+}
+.box1{
+  position: absolute;
+  height: 200rpx;
+  width: 680rpx;
+  border-radius: 20rpx;
+  margin-top: -170rpx;
+  background-color: white;
+}
+.item{
+  text-align: left;
+  margin-left: 30rpx;
+  width: 600rpx;
+  padding: 10rpx;
+  font-size: 18px;
+  justify-content: space-between;
+  /* background-color: blanchedalmond; */
+}
+.item_{
+  height: 55rpx;
+  line-height: 55rpx;
+  margin-left: 30rpx;
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+  width: 600rpx;
+  padding: 10rpx;
+  font-size: 18px;
+  /* background-color: blanchedalmond; */
+}
+.picker{
+  position: absolute;
+  /* background-color: blue; */
+  margin-top: -50rpx;
+  margin-left: 450rpx;
+  color: #aaaaaa;
+}
+.lable{
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+/* 分割线 */
+.divider {
+  height: 1px;
+  background-color: #cfcfcf;
+  width:610rpx;
+}
+.divider3 {
+  height: 1px;
+  background-color: #cfcfcf;
+  width:600rpx;
+  margin-left: 40rpx;
+}
+.jiantou{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border: white;
+  margin-left: 570rpx;
+  margin-top: -60rpx;
+}
+.jiantou_{
+  position: absolute;
+  width: 40rpx;
+  height: 40rpx;
+  border: white;
+  margin-left: 570rpx;
+  margin-top: -40rpx;
+}
+.box2{
+  position: absolute;
+  height: 110rpx;
+  width: 680rpx;
+  margin-top: 70rpx;
+  background-color: white;
+  border-radius: 20rpx;
+}
+.switch{
+  position: absolute;
+  margin-top: -80rpx;
+  margin-left: 500rpx;
+}
+.box3{
+  position: absolute;
+  background-color: white;
+  height: 110rpx;
+  width: 680rpx;
+  margin-top: 220rpx;
+  border-radius: 20rpx;
+}
+.box4{
+  position: absolute;
+  height: 200rpx;
+  width: 680rpx;
+  border-radius: 20rpx;
+  margin-top: 375rpx;
+  background-color: white;
+}
+.version{
+  position: absolute;
+  margin-top: -75rpx;
+  margin-left: 450rpx;
+  color: #aaaaaa;
+}
+.box1,.box2,.box3,.box4{
+  border:1px solid #f78f91;
+}

@@ -1,0 +1,23 @@
+<!--pages/like/like.wxml-->
+
+
+<view class="container">
+  <!-- 动态内容 -->
+  <view class="posts">
+    <scroll-view class="scroll-container">
+      <block wx:for="{{posts}}" wx:key="id">
+        <components-post
+          id="{{item.id}}"
+          avatar="{{item.avatar}}"
+          avatarl="{{item.avatarl}}"
+          username="{{item.username}}"
+          time="{{item.time}}"
+          content="{{item.content}}"
+          likes="{{item.likes}}"
+          comments="{{item.comments}}"
+          bindlike="handleLike"
+        />
+      </block>
+    </scroll-view>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="box1">
+    <view class="item">
+      <navigator url="/packagesB/home/pages/edit/edit" class="lable">编辑个人资料</navigator>
+      <image class="jiantou" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/进入符号.svg"></image>
+      <view class="divider"></view>
+      <navigator url="/packagesB/home/pages/know/know" class="lable">我的认证</navigator>
+      <image class="jiantou" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/进入符号.svg"></image>
+    </view>
+  </view>
+  <view class="box2">
+  <view class="item">
+    <view class="lable">消息通知</view>
+    <switch 
+    class="switch" 
+    checked="{{isNotificationEnabled}}" 
+    bindchange="onNotificationToggle" 
+  />
+  </view>
+  </view>
+  <view class="box3">
+    <view class="item_">
+    <text class="lable">谁可以私信我</text>
+    <picker bindchange="bindPrivateMessageChange" value="{{privateMessageIndex}}" range="{{privateMessageOptions}}">
+      <view class="picker">
+        {{privateMessageOptions[privateMessageIndex]}}
+      </view>
+    </picker>
+    <image class="jiantou_" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/进入符号.svg"></image>
+  </view>
+  </view>
+  <view class="box4">
+    <view class="item">
+    <navigator url="/packagesB/home/pages/personal_/personal_" class="lable">隐私协议</navigator>
+    <image class="jiantou" src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/进入符号.svg"></image>
+      <view class="divider"></view>
+      <navigator class="lable">版本</navigator>
+      <text class="version">已更新</text>
+  </view>
+</view>
+</view>

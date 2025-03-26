@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+  },
+  "navigationBarTitleText":"编辑资料",
+  "navigationBarBackgroundColor": "#ffd5d6",
+  "enablePullDownRefresh": true 
+}

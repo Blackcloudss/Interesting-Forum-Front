@@ -1,0 +1,23 @@
+/* pages/aboutus/aboutus.wxss */
+.container{
+  height: 100vh;
+  background-color: #cae2ff;
+}
+.box{
+  height: 1200rpx;
+  width: 600rpx;
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding:40rpx;
+  position: absolute;
+  margin-top: -150rpx;
+}
+.indented-text{
+  text-indent: 2em; /* 设置首行缩进为两个字符宽度 */
+  font-size: 16px; /* 设置字体大小 */
+  line-height: 1.5; /* 设置行高 */
+}
+.foot{
+  text-align: right;
+  flex:1;
+}

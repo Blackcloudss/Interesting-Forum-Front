@@ -1,0 +1,88 @@
+<view class="page-container">
+    <!-- 第一个盒子：松山湖校区 -->
+    <view class="box">
+        <view class="box-header">
+            <text class="big-title">松山湖校区</text>
+            <text class="prompt-text" bindtap="showCampusOverviewModal1">校区概况</text>
+        </view>
+        <!-- 校区概况模态框 -->
+        <view class="modal-mask" wx:if="{{showOverviewModal1}}" bindtap="hideCampusOverviewModal1"></view>
+        <view class="modal-content_" wx:if="{{showOverviewModal1}}">
+            <text>{{campusOverview1}}</text>
+            <button class="close-modal-btn" bindtap="hideCampusOverviewModal1">关闭</button>
+        </view>
+        <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/松山湖校区地图.jpg" mode="aspectFill" class="campus-map" />
+        <view class="small-box" bindtap="showCampusLinkModal1">
+            <view class="text-container">
+                <text class="small-title">VR全景体验</text>
+                <text class="description">体验身临其境的校园漫步</text>
+            </view>
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/点击 1.svg" mode="widthFix" class="small-box-icon" />
+        </view>
+         <!-- 校园链接模态框 -->
+        <view class="modal-mask" wx:if="{{showLinkModal1}}" bindtap="hideCampusLinkModal1"></view>
+        <view class="modal-content" wx:if="{{showLinkModal1}}">
+            <text class="modal-tip">点击复制链接，身临其境漫步校园！</text>
+            <view class="link-container">
+                <input type="text" value="{{campusLink1}}" class="link-input" disabled />
+                <button class="copy-btn" bindtap="copyLink1">复制链接</button>
+            </view>
+            <button class="close-modal-btn" bindtap="hideCampusLinkModal1">关闭</button>
+        </view>
+    </view>
+
+    <!-- 第二个盒子：莞城校区 -->
+    <view class="box">
+        <view class="box-header">
+            <text class="big-title">莞城校区</text>
+            <text class="prompt-text" bindtap="showCampusOverviewModal2">校区概况</text>
+        </view>
+        <!-- 校区概况模态框 -->
+        <view class="modal-mask" wx:if="{{showOverviewModal2}}" bindtap="hideCampusOverviewModal2"></view>
+        <view class="modal-content_" wx:if="{{showOverviewModal2}}">
+            <text>{{campusOverview2}}</text>
+            <button class="close-modal-btn" bindtap="hideCampusOverviewModal2">关闭</button>
+        </view>
+        <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/莞城校区地图.jpg" mode="aspectFill" class="campus-map" />
+        <view class="small-box" bindtap="showCampusLinkModal2">
+            <view class="text-container">
+                <text class="small-title">VR全景体验</text>
+                <text class="description">探索校园每个角落</text>
+            </view>
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/点击 1.svg" mode="widthFix" class="small-box-icon" />
+        </view>
+        <!-- 校园链接模态框 -->
+        <view class="modal-mask" wx:if="{{showLinkModal2}}" bindtap="hideCampusLinkModal2"></view>
+        <view class="modal-content" wx:if="{{showLinkModal2}}">
+            <text class="modal-tip">点击复制链接，身临其境漫步校园！</text>
+            <view class="link-container">
+                <input type="text" value="{{campusLink2}}" class="link-input" disabled />
+                <button class="copy-btn" bindtap="copyLink2">复制链接</button>
+            </view>
+            <button class="close-modal-btn" bindtap="hideCampusLinkModal2">关闭</button>
+        </view>
+    </view>
+
+    <!-- 第三个盒子 -->
+    <view class="box">
+        <text class="big-title">校园导览小贴士</text>
+        <view class="text-row">
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/时间.svg" mode="widthFix" class="icon" />
+            <text>参观时间：周一至周日23：30之前</text>
+        </view>
+        <view class="text-row">
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/bus 1.svg" mode="widthFix" class="icon" />
+            <text>校巴：工作日7：20-22：15</text>
+        </view>
+        <view class="text-row clickable" bindtap="showImageModal">
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/查看.svg" mode="widthFix" class="icon" style="width:70rpx;height:70rpx;margin-left: 140rpx;margin-top:0rpx; position: absolute;" />
+            <text style="position: relative; margin-left: 200rpx;">查看校巴运营时间</text>
+        </view>
+        <!-- 图片模态框 -->
+        <view class="modal-mask" wx:if="{{showImageModal}}" bindtap="hideImageModal"></view>
+        <view class="modal-content1" wx:if="{{showImageModal}}">
+            <image src="cloud://zouyanqing-8gcva3coe0f95523.7a6f-zouyanqing-8gcva3coe0f95523-1350716191/校园地图/校巴时间.jpg" mode="aspectFill" class="big-image" />
+            <button class="close-modal-btn" bindtap="hideImageModal">关闭</button>
+        </view>
+    </view>
+</view>    

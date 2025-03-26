@@ -1,0 +1,240 @@
+.container {
+  height: 100vh;
+  position: relative;
+  padding: 20px;
+}
+.background{
+  position: absolute;
+  top: -100px;
+  left: 0px;
+  z-index: -1;
+}
+.background-suse{
+  width: 500px !important;
+  height: 600px;
+}
+.second-part{
+  position: relative;
+  width: 360px;
+  height: 243px;
+  margin-top: 150px;
+  background-color: #fff;
+  border: 2px solid #acacac;
+  border-radius: 25px;
+  /* background-color: pink; */
+}
+.touxiang{
+  position: absolute;
+  top: -46px;
+  left: 140px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.header {
+  margin-bottom: 20px;
+  /* background-color: red; */
+  margin-top: 30px;
+  padding-left: 140px;
+}
+/* 性别图标 */
+.sex-icon{
+  width: 26px;
+  height: 26px;
+  margin-top: 5px;
+  /* background-color: red; */
+}
+/* 名字 */
+.title {
+  font-size: 24px;
+  font-weight: bold;
+/* background-color: red; */
+}
+
+/* 学院和学号那一行 */
+.info {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 8px;
+  /* margin-top: 5px; */
+  padding: 5px;
+ 
+}
+/* 学号和学院字体*/
+.id, .college {
+  display: block;
+  width: 120px;
+  height: 27px;
+  padding: 3px;
+  line-height: 33px;
+  margin-bottom: 5px;
+  border: 2px solid #ceeac0;
+  border-radius: 10px;
+}
+.id-icon{
+  width: 33px;
+  height: 33px;
+  /* background-color: red; */
+}
+.college-icon{
+  width: 33px;
+  height: 33px;
+}
+/* 编辑资料那一行 */
+.edit {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  height: 35px;
+  /* background-color: red; */
+}
+.button2{
+  width: 120px !important;
+  height: 35px !important;
+  padding: 3px;
+  line-height: 25px;
+  margin-bottom: 5px;
+  border: 2px solid #ceeac0;
+  border-radius: 10px;
+}
+.edit-icon{
+  position:absolute;
+  width: 30px;
+  height: 30px;
+  left: 90px;
+  
+}
+/* 个性签名那块 */
+.signature {
+  display: flex;
+  position: relative;
+  margin-bottom: 20px;
+  padding-left: 15px ;
+  /* background-color: red; */
+}
+.button1{
+  background-color: #fff;
+  position: fixed;
+  right: 15px;
+  width: 20px !important;
+  height: 25px;
+}
+.edit-signature {
+ 
+  display: flex;
+  margin-left: 30px;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  justify-content: flex-end;
+  /* background-color: pink; */
+}
+.write-icon{
+  position: absolute;
+  position: fixed;
+  right: 25px;
+  width: 20px;
+  height: 25px;
+  margin-top: -7px;
+  /* background-color: blue; */
+}
+.third-part{
+  position: absolute;
+  width: 400px;
+  height: 600px;
+  top:200px;
+  padding-top: 240px;
+ 
+  background-color: #fff;
+  z-index: -1;
+}
+.third-part1{
+  /* background-color: red; */
+  width: 360px;
+  height: 290px;
+  margin-left: 20px;
+  border-right: 2px solid #acacac;
+  border-left: 2px solid #acacac;
+  border-bottom: 2px solid #acacac;
+  border-radius: 25px;
+}
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.tab-button {
+  flex: 1;
+  margin: 0 5px;
+  padding: 10px;
+  text-align: center;
+  /* border: 1px solid #ddd; */
+  border-radius: 15px ;
+  border-bottom: 2px solid #acacac;
+}
+
+.tab-button.active {
+  background-color:#fff;
+  border-right: 2px solid #acacac;
+  border-left: 2px solid #acacac;
+  border-top: 2px solid #acacac;
+  
+}
+.showPosts-icon{
+  width: 20px;
+  height: 20px;
+}
+.showFavorites-icon{
+  width: 20px;
+  height: 20px;
+}
+.my-toux{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.others-toux{
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.posts {
+  margin-top: 20px;
+}
+
+.post {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.favorites-time,.post-time{
+  font-size: 10px;
+  color: #acacac;
+}
+
+.favorites-content,.post-content{
+  
+  margin-left: 15px;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  /* background-color: red; */
+  z-index: 3;
+}
